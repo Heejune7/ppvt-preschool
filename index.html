@@ -20,9 +20,9 @@ const questions=[
  {cat:'동물',prompt:'새',answer:'새',img:'bird.png',opts:[['새','bird.png'],['토끼','rabbit.png'],['물고기','fish.png'],['곰','bear.png']]},
  {cat:'일상용품',prompt:'컵',answer:'컵',img:'cup.png',opts:[['숟가락','spoon.png'],['컵','cup.png'],['책','book.png'],['공','ball.png']]},
  {cat:'일상용품',prompt:'책',answer:'책',img:'book.png',opts:[['의자','chair.png'],['가방','bag.png'],['책','book.png'],['컵','cup.png']]},
- {cat:'일상용품',prompt:'공',answer:'공',img:'ball.png',opts:[['공','ball.png'],['신발','shoe.png'],['숟가락','spoon.png'],['책','book.png']]},
+ {cat:'일상용품',prompt:'공',answer:'공',img:'ball.png',opts:[['공','ball.png'],['신발','boot.png'],['숟가락','spoon.png'],['책','book.png']]},
  {cat:'일상용품',prompt:'의자',answer:'의자',img:'chair.png',opts:[['가방','bag.png'],['컵','cup.png'],['의자','chair.png'],['공','ball.png']]},
- {cat:'일상용품',prompt:'숟가락',answer:'숟가락',img:'spoon.png',opts:[['책','book.png'],['숟가락','spoon.png'],['신발','shoe.png'],['의자','chair.png']]}
+ {cat:'일상용품',prompt:'숟가락',answer:'숟가락',img:'spoon.png',opts:[['책','book.png'],['숟가락','spoon.png'],['신발','boot.png'],['의자','chair.png']]}
 ];
 let index=0,answers=[],startedAt=0,timerInt=null,history=JSON.parse(localStorage.getItem('ppvt-history')||'[]');
 const $=id=>document.getElementById(id);function showView(v){document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===v));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===v));$('pageTitle').textContent=v==='test'?'그림어휘력 검사':'검사 결과 대시보드';$('pageDesc').textContent=v==='test'?'그림을 보고 들려주는 낱말과 같은 그림을 선택하세요.':'아동의 그림어휘력 검사 기록을 한눈에 확인하세요.';}
